@@ -1,10 +1,10 @@
-def rect_area(x,y):
+def rect_area(L,W):
 # Returns Area of Rectangle By Will
-    return(x*y)
+    return(L*W)
 #Function 2
 # Returns Surface Area of Rectangular Solid
-def rect_surface_area(x,y,z):
-    return(2*(x*y+x*z+y*z))
+def rect_surface_area():
+    return(rect_area(L))
 # Request the dimension of a solid rectangular object
 
 length = int(input("Enter the length of the the object as a integer: "))
