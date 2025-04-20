@@ -2,11 +2,18 @@ from queue import Queue
 Priority = Queue(maxsize = 10)
 Standard = Queue(maxsize = 10)
 Economy = Queue(maxsize = 10)
-def LoadData():
+def LoadDataBasic():
     X=['S Mary','P Dee','P Dee','E Eileen','E Mike','E Joe','P Dee','E Vicky','E George','P Dee','P Joe','E Sally','P Joe','S Pete','P Dee','S Bill','S Chase','E Price','P Dee','E Sue']
     return X
+def LoadDataFile():
+    X=list()
+    with open('input queue-1.txt', 'r') as file:
+        for line in file:
+            X.append(line.rstrip('\n'))
+    return(X)
+
 def SortIntoList():
-    X=LoadData()
+    X=LoadDataFile()
     
     y=0
     while y<len(X):
